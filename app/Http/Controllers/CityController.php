@@ -7,16 +7,14 @@ use App\Models\Cities;
 
 class CityController extends Controller
 {
-    public function showAllCity()
+    public function showAllCities()
     {
-        // $City = New City();
-        // return $City;
         return response()->json(cities::all());
     }
 
-    public function showOneCity($id)
+    public function showOneCity($city_id)
     {
-        return response()->json(cities::find($id));
+        return response()->json(cities::where('city_id', $city_id)->get());
     }
 
     // public function create(Request $request)

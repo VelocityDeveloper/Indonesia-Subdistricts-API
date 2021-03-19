@@ -25,9 +25,15 @@ $router->get('/mbuh', function () use ($router) {
 });
 
 $router->group(['prefix' => 'api'], function () use ($router) {
-    $router->get('city',  ['uses' => 'CityController@showAllCity']);
-    $router->get('city/{id}', ['uses' => 'CityController@showOneCity']);
+    $router->get('cities',  ['uses' => 'CityController@showAllCities']);
+    $router->get('cities/{city_id}', ['uses' => 'CityController@showOneCity']);
     // $router->post('city', ['uses' => 'CityController@create']);
     // $router->delete('city/{id}', ['uses' => 'CityController@delete']);
     // $router->put('city/{id}', ['uses' => 'CityController@update']);
+
+    $router->get('provinces',  ['uses' => 'ProvincesController@showAllProvinces']);
+    $router->get('provinces/{province_id}', ['uses' => 'ProvincesController@showOneProvince']);
+    // $router->post('province', ['uses' => 'ProvincesController@create']);
+    // $router->delete('province/{id}', ['uses' => 'ProvincesController@delete']);
+    // $router->put('province/{id}', ['uses' => 'ProvincesController@update']);
   });
