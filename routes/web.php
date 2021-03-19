@@ -17,7 +17,7 @@ $router->get('/', function ()  {
     return view('welcome', 
     [
         'nama_web' => 'Velocity Developer Subdistrict API',
-        'url_web' => 'http://district.nglorok.com'
+        'url_web' => '#'
         ]
 );
 });
@@ -42,6 +42,7 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     // $router->put('province/{id}', ['uses' => 'ProvincesController@update']);
 
     $router->get('subdistricts',  ['uses' => 'SubdistrictsController@showAllSubdistricts']);
+    $router->get('subdistricts/city/{city_id}',  ['uses' => 'SubdistrictsController@showAllSubdistrictsInCity']);
     $router->get('subdistricts/{subdistrict_id}', ['uses' => 'SubdistrictsController@showOneSubdistrict']);
     // $router->post('province', ['uses' => 'SubdistrictsController@create']);
     // $router->delete('province/{id}', ['uses' => 'SubdistrictsController@delete']);

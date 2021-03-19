@@ -12,6 +12,11 @@ class SubdistrictsController extends Controller
         return response()->json(subdistricts::all());
     }
 
+    public function showAllSubdistrictsInCity($city_id)
+    {
+        return response()->json(subdistricts::where('city_id', $city_id)->get());
+    }
+
     public function showOneSubdistrict($subdistrict_id)
     {
         return response()->json(subdistricts::where('subdistrict_id', $subdistrict_id)->get());
