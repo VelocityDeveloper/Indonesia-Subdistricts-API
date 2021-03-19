@@ -22,12 +22,6 @@ $router->get('/', function ()  {
 );
 });
 
-$router->get('/mbuh', function () use ($router) {
-    // return $router->app->version();
-    // return 'Velocity Rest API Alamat';
-    return 'Successs!';
-});
-
 $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('cities',  ['uses' => 'CityController@showAllCities']);
     $router->get('cities/{city_id}', ['uses' => 'CityController@showOneCity']);

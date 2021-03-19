@@ -128,6 +128,30 @@
                                 }...
                             </code>
                         </pre>
+                        <p class="card-text">GET <?php echo $url_web;?>/api/subdistricts/city/1</p>
+                        <pre>
+                            <code>
+                            [
+                                {
+                                    "subdistrict_id": 1,
+                                    "province_id": 21,
+                                    "province": "Nanggroe Aceh Darussalam (NAD)",
+                                    "city_id": 1,
+                                    "city": "Aceh Barat",
+                                    "type": "Kabupaten",
+                                    "subdistrict_name": "Arongan Lambalek"
+                                },
+                                {
+                                    "subdistrict_id": 2,
+                                    "province_id": 21,
+                                    "province": "Nanggroe Aceh Darussalam (NAD)",
+                                    "city_id": 1,
+                                    "city": "Aceh Barat",
+                                    "type": "Kabupaten",
+                                    "subdistrict_name": "Bubon"
+                                }...
+                            </code>
+                        </pre>
                         <p class="card-text">GET <?php echo $url_web;?>/api/subdistricts/1</p>
                         <pre>
                             <code>
