@@ -36,4 +36,10 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     // $router->post('province', ['uses' => 'ProvincesController@create']);
     // $router->delete('province/{id}', ['uses' => 'ProvincesController@delete']);
     // $router->put('province/{id}', ['uses' => 'ProvincesController@update']);
+
+    $router->get('subdistricts',  ['uses' => 'SubdistrictsController@showAllSubdistricts']);
+    $router->get('subdistricts/{subdistrict_id}', ['uses' => 'SubdistrictsController@showOneSubdistrict']);
+    // $router->post('province', ['uses' => 'SubdistrictsController@create']);
+    // $router->delete('province/{id}', ['uses' => 'SubdistrictsController@delete']);
+    // $router->put('province/{id}', ['uses' => 'SubdistrictsController@update']);
   });

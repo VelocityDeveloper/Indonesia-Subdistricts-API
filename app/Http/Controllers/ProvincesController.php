@@ -19,14 +19,14 @@ class ProvincesController extends Controller
 
     // public function create(Request $request)
     // {
-    //     $provinces = City::create($request->all());
+    //     $provinces = provinces::create($request->all());
 
     //     return response()->json($provinces, 201);
     // }
 
     // public function update($id, Request $request)
     // {
-    //     $provinces = City::findOrFail($id);
+    //     $provinces = provinces::findOrFail($id);
     //     $provinces->update($request->all());
 
     //     return response()->json($provinces, 200);
@@ -34,7 +34,7 @@ class ProvincesController extends Controller
 
     // public function delete($id)
     // {
-    //     City::findOrFail($id)->delete();
+    //     provinces::findOrFail($id)->delete();
     //     return response('Deleted Successfully', 200);
     // }
 }
