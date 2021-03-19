@@ -13,9 +13,13 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-    // return 'Velocity Rest API Alamat';
+$router->get('/', function ()  {
+    return view('welcome', 
+    [
+        'nama_web' => 'Velocity Developer Subdistrict API',
+        'url_web' => 'http://district.nglorok.com'
+        ]
+);
 });
 
 $router->get('/mbuh', function () use ($router) {
@@ -41,5 +45,5 @@ $router->group(['prefix' => 'api'], function () use ($router) {
     $router->get('subdistricts/{subdistrict_id}', ['uses' => 'SubdistrictsController@showOneSubdistrict']);
     // $router->post('province', ['uses' => 'SubdistrictsController@create']);
     // $router->delete('province/{id}', ['uses' => 'SubdistrictsController@delete']);
-    // $router->put('province/{id}', ['uses' => 'SubdistrictsController@update']);
+    // $router->put('province/{id}', ['uses' => 'subdistrictsController@update']);
   });
