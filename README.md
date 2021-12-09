@@ -14,8 +14,7 @@
 
 - GET subdistricts
 - GET subdistricts/city/{city_id}
-- GET subdistricts/{subdistrict_id}
-    
+- GET subdistricts/{subdistrict_id}   
 
 ## Contributing
 
